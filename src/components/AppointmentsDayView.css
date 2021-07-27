@@ -1,0 +1,18 @@
+.appointments_container {
+  display: flex;
+  inline-size: 80vw;
+  justify-content: space-evenly;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+
+.time_button {
+  background-color: rgb(26, 110, 189);
+  color: white;
+  font-weight: bold;
+}
+
+.time_button:hover {
+  cursor: pointer;
+  background-color: rgb(80, 134, 184);
+}

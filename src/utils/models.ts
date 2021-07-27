@@ -1,5 +1,8 @@
 export interface Customer {
   firstName: string;
+  stylist: string;
+  service: string;
+  notes?: string;
 }
 
 export interface Appointment {

@@ -1,9 +1,14 @@
 import React from "react";
-import { AppointmentsDayView } from "./components/Appointment";
+import { AppointmentsDayView } from "./components/AppoimentsDayView";
 import { mockAppointments } from "./utils/mockData";
+import "./App.css";
 
 function App() {
-  return <AppointmentsDayView appointments={mockAppointments} />;
+  return (
+    <div className="app">
+      <AppointmentsDayView appointments={mockAppointments} />
+    </div>
+  );
 }
 
 export default App;
