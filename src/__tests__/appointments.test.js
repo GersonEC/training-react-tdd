@@ -25,6 +25,20 @@ describe("Appointment", () => {
 
     expect(container.textContent).toMatch("Jordan");
   });
+
+  it("renders stylist name and salon service", () => {
+    const notes = "Some note about the stylist.";
+    customer = {
+      firstName: "Gerson",
+      stylist: "Maggie",
+      service: "hair wash",
+      notes: notes,
+    };
+    render(<Appointment customer={customer} />);
+    expect(container.textContent).toMatch("Maggie");
+    expect(container.textContent).toMatch("hair wash");
+    expect(container.textContent).toMatch(notes);
+  });
 });
 
 describe("AppointmentsDayView", () => {

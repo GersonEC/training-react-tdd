@@ -11,6 +11,7 @@ export const Appointment = (props: AppointmentProps) => {
       <p>Customer: {props.customer.firstName}</p>
       <p>Stylist: {props.customer.stylist}</p>
       <p>Service: {props.customer.service}</p>
+      <p>Notes: {props.customer.notes}</p>
     </div>
   );
 };
