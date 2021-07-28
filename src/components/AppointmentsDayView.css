@@ -10,6 +10,7 @@
   background-color: rgb(26, 110, 189);
   color: white;
   font-weight: bold;
+  margin-right: 4rem;
 }
 
 .time_button:hover {

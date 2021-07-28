@@ -32,9 +32,7 @@ export const AppointmentsDayView = (props: AppointmentsDayViewProps) => {
       {props.appointments.length === 0 ? (
         <p>There are no appointments today</p>
       ) : (
-        <Appointment
-          customer={props.appointments[selectedAppointment].customer}
-        />
+        <Appointment appointment={props.appointments[selectedAppointment]} />
       )}
     </div>
   );

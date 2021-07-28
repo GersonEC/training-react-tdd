@@ -7,34 +7,65 @@ import ReactTestUtils from "react-dom/test-utils";
 describe("Appointment", () => {
   let customer;
   let container;
+  let appointment;
+
   const render = (component) => ReactDOM.render(component, container);
   beforeEach(() => {
     container = document.createElement("div");
   });
 
   it("renders the customer first name", () => {
+    const today = new Date();
+    const notes = "Some note about the stylist.";
     customer = { firstName: "Ashley" };
-    render(<Appointment customer={customer} />);
+    appointment = {
+      startsAt: today.setHours(12, 0),
+      customer: customer,
+      stylist: "Maggie",
+      service: "hair wash",
+      notes: notes,
+    };
+    render(<Appointment appointment={appointment} />);
 
     expect(container.textContent).toMatch("Ashley");
   });
 
   it("renders another customer first name", () => {
-    customer = { firstName: "Jordan" };
-    render(<Appointment customer={customer} />);
+    const today = new Date();
+    const notes = "Some note about the stylist.";
+    customer = {
+      firstName: "Jordan",
+      lastName: "Nima",
+      phoneNumber: "1234567",
+    };
+    appointment = {
+      startsAt: today.setHours(12, 0),
+      customer: customer,
+      stylist: "Maggie",
+      service: "hair wash",
+      notes: notes,
+    };
+    render(<Appointment appointment={appointment} />);
 
     expect(container.textContent).toMatch("Jordan");
   });
 
   it("renders stylist name and salon service", () => {
+    const today = new Date();
     const notes = "Some note about the stylist.";
     customer = {
       firstName: "Gerson",
+      lastName: "Enriquez",
+      phoneNumber: "1234567",
+    };
+    appointment = {
+      startsAt: today.setHours(12, 0),
+      customer: customer,
       stylist: "Maggie",
       service: "hair wash",
       notes: notes,
     };
-    render(<Appointment customer={customer} />);
+    render(<Appointment appointment={appointment} />);
     expect(container.textContent).toMatch("Maggie");
     expect(container.textContent).toMatch("hair wash");
     expect(container.textContent).toMatch(notes);
