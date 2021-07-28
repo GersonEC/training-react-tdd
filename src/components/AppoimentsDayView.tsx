@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Appointment as AppointmentModel } from "../utils/models";
+import { appointmentTimeOfDay } from "../utils/utilities";
 import { Appointment } from "./Appointment";
 import "./AppointmentsDayView.css";
-
-const appointmentTimeOfDay = (startsAt: number) => {
-  const [h, m] = new Date(startsAt).toTimeString().split(":");
-  return `${h}:${m}`;
-};
 
 interface AppointmentsDayViewProps {
   appointments: AppointmentModel[];
