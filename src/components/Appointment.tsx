@@ -1,7 +1,7 @@
 import React from "react";
 import { Appointment as AppointmentModel } from "../utils/models";
 import { appointmentTimeOfDay } from "../utils/utilities";
-import "./Appointment.css";
+import "./styles/Appointment.css";
 interface AppointmentProps {
   appointment: AppointmentModel;
 }

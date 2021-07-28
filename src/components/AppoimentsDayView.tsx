@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Appointment as AppointmentModel } from "../utils/models";
 import { appointmentTimeOfDay } from "../utils/utilities";
 import { Appointment } from "./Appointment";
-import "./AppointmentsDayView.css";
+import "./styles/AppointmentsDayView.css";
 
 interface AppointmentsDayViewProps {
   appointments: AppointmentModel[];
