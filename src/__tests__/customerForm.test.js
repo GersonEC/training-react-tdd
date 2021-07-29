@@ -1,6 +1,7 @@
 import React from "react";
 import { createContainer } from "./domManipulators";
 import { CustomerForm } from "../components/CustomerForm";
+import ReactTestUtils from "react-dom/test-utils";
 
 describe("CustomerForm", () => {
   let render, container;
@@ -45,5 +46,30 @@ describe("CustomerForm", () => {
   it("assigns an id that matches the label id to the first name field", () => {
     render(<CustomerForm />);
     expect(firstNameField().id).toEqual("firstName");
+  });
+
+  it("saves existing first name when submitted", async () => {
+    expect.hasAssertions();
+    render(
+      <CustomerForm
+        firstName="Ashley"
+        onSubmit={(firstName) => expect(firstName).toEqual("Ashley")}
+      />
+    );
+    await ReactTestUtils.Simulate.submit(form("customer"));
+  });
+
+  it("saves new first name when submitted", async () => {
+    expect.hasAssertions();
+    render(
+      <CustomerForm
+        firstName="Ashley"
+        onSubmit={(firstName) => expect(firstName).toEqual("Jamie")}
+      />
+    );
+    await ReactTestUtils.Simulate.change(firstNameField(), {
+      target: { value: "Jamie" },
+    });
+    await ReactTestUtils.Simulate.submit(form("customer"));
   });
 });
