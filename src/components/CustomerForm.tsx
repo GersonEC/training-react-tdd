@@ -1,9 +1,19 @@
 import React from "react";
 
-export const CustomerForm = () => {
+interface CustomerFormProps {
+  firstName: string;
+}
+export const CustomerForm = (props: CustomerFormProps) => {
   return (
     <form id="customer">
-      <input type="text" name="firstName" />
+      <label htmlFor="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        value={props.firstName}
+        readOnly
+      />
     </form>
   );
 };
