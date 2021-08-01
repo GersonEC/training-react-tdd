@@ -10,6 +10,9 @@ export function Header() {
         <li>
           <Link to="/appointments">Appointments App</Link>
         </li>
+        <li>
+          <Link to="/joke">Joke App</Link>
+        </li>
       </ul>
     </div>
   );

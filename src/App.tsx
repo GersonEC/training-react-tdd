@@ -4,6 +4,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { AppointmentsApp } from "./pages/AppointmentsApp";
 import { Home } from "./pages/Home";
+import { JokeApp } from "./pages/JokeApp";
 
 const Routes = () => {
   return (
@@ -13,6 +14,9 @@ const Routes = () => {
       </Route>
       <Route path="/appointments">
         <AppointmentsApp />
+      </Route>
+      <Route path="/joke">
+        <JokeApp />
       </Route>
     </Switch>
   );
