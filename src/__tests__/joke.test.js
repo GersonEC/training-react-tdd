@@ -1,7 +1,7 @@
 import { screen, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Joke } from "../components/Joke";
-import { JokeGenerator } from "../containers/JokeGenerator";
+import { JokeConatiner } from "../containers/JokeContainer";
 import * as axios from "axios";
 import MockAxios from "axios-mock-adapter";
 
@@ -24,7 +24,7 @@ describe("Joke", () => {
   test("JokeGenerator component fetches a randome joke to renders it", async () => {
     //Arrange
     const noJokeMessage = "You haven't loaded any joke yet!";
-    render(<JokeGenerator />);
+    render(<JokeConatiner />);
     expect(screen.getByText(noJokeMessage)).toBeInTheDocument();
 
     //Act

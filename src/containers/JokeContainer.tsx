@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Joke } from "../components/Joke";
 
-export function JokeGenerator() {
+export function JokeConatiner() {
   const [state, setState] = useState({
     joke: null,
     loading: false,
