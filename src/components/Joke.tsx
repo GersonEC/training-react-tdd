@@ -3,5 +3,9 @@ interface JokeProps {
 }
 
 export function Joke(props: JokeProps) {
-  return <h3 data-testid="joke-text">{props.text}</h3>;
+  return (
+    <h3 data-testid="joke-text" style={{ color: "green" }}>
+      {props.text}
+    </h3>
+  );
 }

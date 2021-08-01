@@ -38,5 +38,6 @@ describe("Joke", () => {
       expect(screen.queryByText("Loading...")).not.toBeInTheDocument()
     );
     expect(screen.queryByTestId("joke-text")).toBeInTheDocument();
+    expect(screen.queryByTestId("joke-text")).toHaveStyle(`color: green`);
   });
 });
