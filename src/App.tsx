@@ -1,14 +1,30 @@
 import React from "react";
-import { AppointmentsDayView } from "./components/AppoimentsDayView";
-import { mockAppointments } from "./utils/mockData";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { CustomerForm } from "./components/CustomerForm";
+import { Header } from "./components/Header";
+import { AppointmentsApp } from "./pages/AppointmentsApp";
+import { Home } from "./pages/Home";
+
+const Routes = () => {
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/appointments">
+        <AppointmentsApp />
+      </Route>
+    </Switch>
+  );
+};
 
 function App() {
   return (
     <div className="app">
-      <AppointmentsDayView appointments={mockAppointments} />
-      <CustomerForm firstName="Ashley" onSubmit={() => {}} />
+      <Router>
+        <Header />
+        <Routes />
+      </Router>
     </div>
   );
 }
