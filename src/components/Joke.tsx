@@ -1,5 +1,5 @@
 interface JokeProps {
-  text: string;
+  text: string | null;
 }
 
 export function Joke(props: JokeProps) {

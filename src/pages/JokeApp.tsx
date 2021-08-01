@@ -1,5 +1,5 @@
-import { Joke } from "../components/Joke";
+import { JokeGenerator } from "../containers/JokeGenerator";
 
 export function JokeApp() {
-  return <Joke text="some text" />;
+  return <JokeGenerator />;
 }
