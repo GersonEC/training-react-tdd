@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM, { render } from "react-dom";
+import ReactDOM from "react-dom";
 import { AppointmentsDayView } from "../components/AppoimentsDayView";
 import { Appointment } from "../components/Appointment";
 import ReactTestUtils from "react-dom/test-utils";

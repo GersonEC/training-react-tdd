@@ -11,3 +11,9 @@ export interface Appointment {
   service: string;
   notes: string;
 }
+
+export interface Comment {
+  id: number;
+  comment: string;
+  author: string;
+}

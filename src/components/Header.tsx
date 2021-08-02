@@ -13,6 +13,9 @@ export function Header() {
         <li>
           <Link to="/joke">Joke App</Link>
         </li>
+        <li>
+          <Link to="/comments">Comments App</Link>
+        </li>
       </ul>
     </div>
   );

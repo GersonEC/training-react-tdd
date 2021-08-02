@@ -1,4 +1,4 @@
-import { Appointment } from "./models";
+import { Appointment, Comment } from "./models";
 import { name, phone, lorem } from "faker";
 
 const getRandomInt = (max: number) => {
@@ -64,5 +64,18 @@ export const mockAppointments: Appointment[] = [
   {
     startsAt: at(17),
     ...generateFakeAppointment(),
+  },
+];
+
+export const mockComments: Comment[] = [
+  {
+    id: 1,
+    comment: "I do love writing tests",
+    author: "The Notester",
+  },
+  {
+    id: 2,
+    comment: "Nothing is better than a good comment app",
+    author: "Comment Hater",
   },
 ];
