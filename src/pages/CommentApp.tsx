@@ -1,6 +1,6 @@
 import { CommentForm } from "../components/CommentForm";
 import { CommentList } from "../components/CommentList";
-import { mockComments } from "../utils/mockData";
+import { fakeComments } from "../utils/stubs";
 
 export function CommentApp() {
   return (
@@ -14,7 +14,7 @@ export function CommentApp() {
       }}
     >
       <CommentForm />
-      <CommentList comments={mockComments} />
+      <CommentList comments={fakeComments} />
     </div>
   );
 }

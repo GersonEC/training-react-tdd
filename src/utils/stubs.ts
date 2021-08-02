@@ -31,7 +31,7 @@ const generateFakeAppointment = () => ({
   notes: lorem.paragraph(),
 });
 
-export const mockAppointments: Appointment[] = [
+export const fakeAppointments: Appointment[] = [
   { startsAt: at(9), ...generateFakeAppointment() },
   {
     startsAt: at(10),
@@ -67,7 +67,7 @@ export const mockAppointments: Appointment[] = [
   },
 ];
 
-export const mockComments: Comment[] = [
+export const fakeComments: Comment[] = [
   {
     id: 1,
     comment: "I do love writing tests",
